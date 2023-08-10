@@ -69,11 +69,25 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.api.nvim_create_augroup("autoshowneotree", { clear = true })
+
+    vim.api.nvim_create_autocmd("TabNewEntered", {
+      desc = "Show neo tree when new tab is created",
+      group = "autoshowneotree",
+      -- callback = function() vim.cmd ":Neotree reveal" end,
+      command = ":Neotree reveal",
+    })
+
+    vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+      desc = "highlight exs files too",
+      pattern = "*.exs",
+      command = "set syntax=elixir",
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
+    -- extension = {
+    --   exs = "elixir",
+    -- },
     --   filename = {
     --     ["Foofile"] = "fooscript",
     --   },

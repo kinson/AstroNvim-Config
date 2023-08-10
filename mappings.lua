@@ -32,9 +32,15 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- customize toggle term mapping
+    ["<F6>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<F7>"] = false,
   },
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = { "<C-\\><C-N>", desc = "Leave normal mode" },
+    ["+"] = { "2<C-\\>", desc = "Add split term" },
+    ["<F6>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<F7>"] = false,
   },
 }

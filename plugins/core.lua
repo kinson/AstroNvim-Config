@@ -20,6 +20,10 @@ return {
       return opts
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = { open_mapping = [[<F6>]], direction = "vertical", size = 75 },
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
