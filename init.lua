@@ -52,6 +52,12 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      elixirls = function(opts)
+        opts.settings = { elixirLs = { dialyzerEnabled = false, fetchDeps = false } }
+        return opts
+      end,
+    },
   },
 
   -- Configure require("lazy").setup() options
@@ -83,6 +89,9 @@ return {
       pattern = "*.exs",
       command = "set syntax=elixir",
     })
+
+    -- taken from page 156 of Practical Vim
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     -- extension = {
