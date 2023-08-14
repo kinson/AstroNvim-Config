@@ -54,7 +54,10 @@ return {
     },
     config = {
       elixirls = function(opts)
-        opts.settings = { elixirLs = { dialyzerEnabled = false, fetchDeps = false } }
+        local path_to_elixirls = vim.fn.expand "~/Documents/vim/elixir-ls/release/language_server.sh"
+
+        opts.settings = { elixirLs = { dialyzerEnabled = true, fetchDeps = false } }
+        opts.cmd = { path_to_elixirls }
         return opts
       end,
     },
