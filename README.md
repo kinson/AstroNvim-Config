@@ -1,6 +1,11 @@
-# AstroNvim User Configuration Example
+# kinson's AstroNvim Configs
 
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+Based on a user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim).
+
+## Required Tools
+
+* [fd](https://github.com/sharkdp/fd)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## 🛠️ Installation
 

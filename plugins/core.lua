@@ -24,6 +24,22 @@ return {
     "akinsho/toggleterm.nvim",
     opts = { open_mapping = [[<F6>]], direction = "vertical", size = 75 },
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        find_command = "fd",
+        find_args = {
+          fd = {
+            "--exclude",
+            ".git",
+            "--exclude",
+            "node_modules",
+          },
+        },
+      },
+    },
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
