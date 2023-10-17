@@ -24,6 +24,7 @@ return {
     "akinsho/toggleterm.nvim",
     opts = { open_mapping = [[<F6>]], direction = "vertical", size = 75 },
   },
+  { "christoomey/vim-tmux-navigator" },
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
