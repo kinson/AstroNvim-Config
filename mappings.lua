@@ -39,6 +39,7 @@ return {
     -- customize toggle term mapping
     ["<F6>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<F7>"] = false,
+    ["<leader>w"] = { ":bp<bar>sp<bar>bn<bar>bd<cr>", desc = "Close buffer" },
   },
   t = {
     -- setting a mapping to false will disable it

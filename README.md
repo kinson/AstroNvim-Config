@@ -39,3 +39,13 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/us
 ```shell
 nvim
 ```
+
+## Install Notes
+
+### To Get Command + W to Close Buffer
+
+1. Open iterm settings (command + ,)
+2. Go to "keys" section
+3. Add new key binding for "command + w"
+4. Set it to "Send Text with vim Special Characters"
+5. Set value to " w" (or whatever <leader>w is)
