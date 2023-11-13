@@ -19,7 +19,11 @@ return {
     },
     op = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" },
     qq = { function() require("telescope.builtin").live_grep() end, desc = "Search project" },
-    of = { function() require("telescope.builtin").find_files() end, desc = "Find file" },
+    ff = { function() require("telescope.builtin").find_files() end, desc = "Find file" },
+    of = {
+      function() require("telescope.builtin").find_files { hidden = true } end,
+      desc = "Find file (include hidden)",
+    },
     ww = { function() require("telescope.builtin").grep_string() end, desc = "Find word under cursor" },
 
     -- mappings seen under group name "Buffer"
