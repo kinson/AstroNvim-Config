@@ -8,6 +8,7 @@ return {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         "elixirls",
+        "bufls",
         "tsserver",
       })
     end,
@@ -24,6 +25,11 @@ return {
         "eslint_d",
       })
     end,
+  },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
   {
     "jay-babu/mason-nvim-dap.nvim",

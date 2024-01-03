@@ -44,7 +44,6 @@ return {
         },
       },
     }
-    print(vim.inspect(opts.tabline))
     opts.tabline = { -- bufferline
       { -- file tree padding
         condition = function(self)
@@ -57,7 +56,7 @@ return {
         provider = function(self) return string.rep(" ", vim.api.nvim_win_get_width(self.winid) + 1) end,
         hl = { bg = "tabline_bg" },
       },
-      status.heirline.make_buflist(status.component.tabline_file_info { padding = { left = 3, right = 3 } }), -- component for each buffer tab
+      status.heirline.make_buflist(status.component.tabline_file_info { padding = { left = 2, right = 2 } }), -- component for each buffer tab
       status.component.fill { hl = { bg = "tabline_bg" } }, -- fill the rest of the tabline with background color
       { -- tab list
         condition = function() return #vim.api.nvim_list_tabpages() >= 2 end, -- only show tabs if there are more than one

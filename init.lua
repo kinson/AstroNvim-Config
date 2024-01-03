@@ -64,6 +64,15 @@ return {
     },
   },
 
+  heirline = {
+    colors = {
+      buffer_active_bg = "#6BFF29",
+      buffer_active_fg = "#444444",
+      buffer_visible_bg = "#3646F5",
+      buffer_visible_fg = "#ffffff",
+    },
+  },
+
   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
