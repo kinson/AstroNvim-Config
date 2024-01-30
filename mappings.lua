@@ -19,6 +19,12 @@ return {
     },
     op = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" },
     qq = { function() require("telescope.builtin").live_grep() end, desc = "Search project" },
+    qw = {
+      function()
+        require("telescope.builtin").live_grep { additional_args = function(opts) return { "--hidden" } end }
+      end,
+      desc = "Search project (include hidden)",
+    },
     ff = { function() require("telescope.builtin").find_files() end, desc = "Find file" },
     of = {
       function() require("telescope.builtin").find_files { hidden = true } end,
